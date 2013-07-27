@@ -28,38 +28,38 @@ func main() {
 }
 ```
 
-# Documentation
+## Documentation
 Since this is my first venture into writing a Go library, I wanted to make a simple API that accomplishes its task elegantly. If you think anything here breaks this philosophy, go ahead and open an issue and tell me what sucks.
 
-## Func: `New(api_key string) *gowl.Gowl`
+### Func: `New(api_key string) *gowl.Gowl`
 Creates a new instance of a `gowl.Gowl` type and returns a pointer to the struct
 
-## Type: `Gowl`
+### Type: `Gowl`
 Manages interactions with an API based on an API key.
 
-### Variable: `ApiKey`
+#### Variable: `ApiKey`
 The API key for this Gowl instance.
 
-### Func: `Add(notification *Notification) error`
+#### Func: `Add(notification *Notification) error`
 Sends the provided `notification` struct to the API. Returns an error object if anything has gone wrong, nil if the notification was sent successfully.
 
-## Type: `Notification`
+### Type: `Notification`
 Represents a notification that will be sent to the API using `Gowl.Add(...)`
 
-### Variable: `Url`
+#### Variable: `Url`
 See [prowl docs](http://www.prowlapp.com/api.php#add).
 
-### Variable: `Application`
+#### Variable: `Application`
 See [prowl docs](http://www.prowlapp.com/api.php#add).
 
-### Variable: `Event`
+#### Variable: `Event`
 See [prowl docs](http://www.prowlapp.com/api.php#add).
 
-### Variable: `Description`
+#### Variable: `Description`
 See [prowl docs](http://www.prowlapp.com/api.php#add).
 
-### Variable: `Priority`
+#### Variable: `Priority`
 See [prowl docs](http://www.prowlapp.com/api.php#add).
 
-# License
+## License
 Gowl is released under the [MIT License](http://opensource.org/licenses/MIT). Do whatever you want with the code as long as you have fun with it!
