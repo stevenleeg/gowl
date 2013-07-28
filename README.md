@@ -9,7 +9,7 @@ Gowl's goal is to make sending prowl notifications as easy as possible. This is 
 package main
 
 import (
-    "gowl"
+    "github.com/stevenleeg/gowl"
     "fmt"
 )
 
