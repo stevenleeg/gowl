@@ -5,7 +5,7 @@ Gowl is a simple implementation of the [prowl](https://www.prowlapp.com) API in 
 
 Gowl's goal is to make sending prowl notifications as easy as possible. This is all the code you need to start sending notifications to your iOS devices:
 
-```
+```go
 package main
 
 import (
@@ -37,29 +37,24 @@ Creates a new instance of a `gowl.Gowl` type and returns a pointer to the struct
 ### Type: `Gowl`
 Manages interactions with an API based on an API key.
 
-#### Variable: `ApiKey`
-The API key for this Gowl instance.
+```go
+type Gowl struct {
+    ApiKey string
+}
+```
 
-#### Func: `Add(notification *Notification) error`
+#### Func: `(gowl *Gowl) Add(notification *Notification) error`**
 Sends the provided `notification` struct to the API. Returns an error object if anything has gone wrong, nil if the notification was sent successfully.
 
 ### Type: `Notification`
 Represents a notification that will be sent to the API using `Gowl.Add(...)`
 
-#### Variable: `Url`
-See [prowl docs](http://www.prowlapp.com/api.php#add).
-
-#### Variable: `Application`
-See [prowl docs](http://www.prowlapp.com/api.php#add).
-
-#### Variable: `Event`
-See [prowl docs](http://www.prowlapp.com/api.php#add).
-
-#### Variable: `Description`
-See [prowl docs](http://www.prowlapp.com/api.php#add).
-
-#### Variable: `Priority`
-See [prowl docs](http://www.prowlapp.com/api.php#add).
+```go
+type Notification struct {
+    Priority int,
+    Url, Application, Event, Description string
+}
+```
 
 ## License
 Gowl is released under the [MIT License](http://opensource.org/licenses/MIT). Do whatever you want with the code as long as you have fun with it!
